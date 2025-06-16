@@ -7,14 +7,17 @@
     "build": "next build",
     "start": "next start",
     "test": "echo \"No tests yet\" && exit 0",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "prepare": "husky install",
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.1.1",
+    "@svgr/webpack": "^8.1.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

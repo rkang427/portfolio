@@ -4,16 +4,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans: 'Arial', 'Helvetica', sans-serif;
+  --font-sans: 'Quicksand', sans-serif;
 }
 @theme inline {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #030004;
 }
-@media (prefers-color-scheme: dark) {
+
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #030004;
   }
 }
 
