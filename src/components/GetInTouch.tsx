@@ -1,7 +1,11 @@
 'use client';
 // import ContactForm from "@/components/ContactForm";
+type GetInTouchProps = {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function GetInTouch({ open, setOpen }) {
+export default function GetInTouch({ open, setOpen }: GetInTouchProps) {
   return (
     <>
       <button
