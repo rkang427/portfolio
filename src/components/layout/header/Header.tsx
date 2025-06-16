@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 //import { useState } from 'react';
 
-import SearchBar from '@/components/SearchBar';
-import GetInTouch from '@/components/GetInTouch';
+import SearchBar from '@/components/layout/header/SearchBar';
+import GetInTouch from '@/components/layout/header/GetInTouch';
 //ultimately want to try to get to 0.02554744525 ratio for height
 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -51,7 +51,7 @@ export default function Header() {
         <ul className="flex space-x-4 items-center">
           <li>
             <Link
-              href="/"
+              href="/public"
               className="hover:border-pine hover:text-pine transition delay-75 rounded-full px-2 py-1 text-medGray bg-white flex items-center space-x-2"
             >
               <div className="w-6 h-6 overflow-hidden items-center ">
@@ -106,10 +106,10 @@ export default function Header() {
         <ul className="flex space-x-4 whitespace-nowrap">
           <li>
             <Link
-              href="/webinspo"
+              href="/blog"
               className="w-full rounded-full px-2 py-1  hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
-              Website Inspiration and Design
+              My Blog
             </Link>
           </li>
           <li>
@@ -117,15 +117,15 @@ export default function Header() {
               href="/skills"
               className="rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
-              Explore Skills
+              My Skills
             </Link>
           </li>
           <li>
             <Link
-              href="/blog"
+              href="/webinspo"
               className="rounded-full px-2 py-1 hover:text-darkGray hover:border-pine transition delay-75 border border-lightLime hover:bg-lightLime text-darkGray bg-lime font-semibold"
             >
-              Blog
+              Inspiration for this Site
             </Link>
           </li>
         </ul>
