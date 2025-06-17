@@ -1,11 +1,22 @@
 import Intro from '@/components/main/Intro';
-
+import Resume from '@/components/main/Resume';
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
-        <Intro />
-      </main>
-    </div>
+    <>
+      <div className="flex flex-col md:flex-row items-stretch space-y-8 md:space-y-0 h-full ">
+        <div className="md:basis-[67%]">
+          <Intro />
+
+
+        </div>
+
+
+        <div className="hidden md:block border-l border-gray-300  self-stretch" />
+
+        <div className="md:basis-[33%]">
+          <Resume />
+        </div>
+      </div>
+    </>
   );
 }

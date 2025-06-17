@@ -30,7 +30,7 @@ export default function Header() {
         <ul className="md:mb-12 flex space-x-3 items-baseline md:mx-10 justify-end">
           <li>
             <Link
-              href="https://github.com/rkang427"
+              href="https://github.com/rkang427/portfolio"
               className="items-center rounded-full border py-3 px-2.5 font-semibold text-darkGray text-sm"
             >
               <GitHubIcon className="items-center" width={60} height={60} />
@@ -114,15 +114,19 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/skills"
+              href="https://tinyurl.com/figmark840"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
-              My Skills
+              Figma for Site
             </Link>
           </li>
           <li>
             <Link
-              href="/webinspo"
+              href="https://dribbble.com/shots/24883719-AI-Data-Science-Machine-Learning-Template" //"/webinspo"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full px-2 py-1 hover:text-darkGray hover:border-pine transition delay-75 border border-lightLime hover:bg-lightLime text-darkGray bg-lime font-semibold"
             >
               Inspiration for this Site

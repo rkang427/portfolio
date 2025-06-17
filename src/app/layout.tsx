@@ -24,19 +24,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       {/*<Head>*/}
       {/*  <link rel="icon" type="image/svg+xml" href="/home.svg" /> */}
       {/*</Head>*/}
       <body
-        className={`${quicksand.variable} antialiased flex flex-col min-h-screen`}
+        className={`${quicksand.variable} antialiased flex flex-col min-h-screen h-full`}
       >
         <Theme>
           <Header />
-          <hr className="my-4 mx-auto w-[95%] border-t lightGray" />
-          <main className="flex-grow container mx-auto px-4 py-8">
-            {children}
-          </main>
+          <hr className=" mx-auto w-[95%] border-t lightGray" />
+          <main className="flex-grow container mx-auto px-4 ">{children}</main>
           <Footer />
         </Theme>
       </body>
