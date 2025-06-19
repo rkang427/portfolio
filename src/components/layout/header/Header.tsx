@@ -18,9 +18,9 @@ export default function Header() {
 
   return (
     <header className="white text-medGray p-4">
-      <div className="flex justify-between items-center md:mx-10 md:mb-12">
-        <ul className="md:mb-12 flex space-x-3 items-baseline md:mx-10 justify-start">
-          <li className="w-10 h-10">
+      <div className="flex justify-between  items-center md:mx-10 md:mb-12">
+        <ul className="md:mb-12 flex space-x-3 items-center md:mx-10 justify-start">
+          <li className="w-10 h-10 items-center">
             <Image src="/hamster.gif" alt="Loading" width={80} height={80} />
           </li>
           <li className="font-semibold text-darkGray text-2xl">Rhee Kang</li>
@@ -29,18 +29,18 @@ export default function Header() {
             Charlotte, NC || San Jose, CA
           </li>
         </ul>
-        <ul className="md:mb-12 flex space-x-3 items-baseline md:mx-10 justify-end">
+        <ul className="md:mb-12 flex space-x-3 items-center md:mx-10  justify-end">
           <li>
             <Link
               href="https://github.com/rkang427/portfolio"
-              className="items-center rounded-full border py-3 px-2.5 font-semibold text-darkGray text-sm"
+              className=" items-center rounded-full border py-3 px-2.5 font-semibold text-darkGray text-sm"
             >
-              <GitHubIcon className="items-center" width={60} height={60} />
+              <GitHubIcon className="items-center " width={60} height={60} />
             </Link>
           </li>
           <Link
             href="https://linkedin.com/in/rkang427/"
-            className="items-center rounded-full border py-3 px-2.5 font-semibold text-darkGray text-sm"
+            className="items-center rounded-full border py-2.5 px-2.5 font-semibold text-darkGray text-sm"
           >
             <LinkedInIcon className="items-center" width={60} height={60} />
           </Link>
@@ -83,7 +83,7 @@ export default function Header() {
           </li>
         </ul>
         <div
-          className={`w-full md:pl-20 ${contactOpen ? 'opacity-20 pointer-events-none' : ''}`}
+          className={`w-full md:pl-20 ${contactOpen ? 'opacity-0 pointer-events-none' : ''}`}
         >
           <SearchBar />
         </div>

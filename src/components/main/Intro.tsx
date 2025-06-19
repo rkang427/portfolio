@@ -4,7 +4,7 @@ export default function Intro() {
   return (
     <>
       <div className="md:flex items-center justify-baseline gap-10">
-        <h1 className="text-6xl font-extrabold text-darkGray py-4">
+        <h1 className="text-6xl font-extrabold text-darkGray py-4 mt-3">
           Hey There
         </h1>
         <Image

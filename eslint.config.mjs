@@ -20,6 +20,7 @@ const eslintConfig = [
       prettier: prettierPlugin,
     },
     rules: {
+      '@typescript-eslint/no-require-imports': 'off',
       'prettier/prettier': 'error', // makes prettier errors show as ESLint errors
     },
   },
