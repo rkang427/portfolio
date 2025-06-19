@@ -11,6 +11,8 @@ import GetInTouch from '@/components/layout/header/GetInTouch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useState } from 'react';
+import HamburgerMenu from '@/components/layout/header/HamburgerMenu';
+
 export default function Header() {
   const [contactOpen, setContactOpen] = useState(false);
 
@@ -51,7 +53,7 @@ export default function Header() {
         <ul className="flex space-x-4 items-center">
           <li>
             <Link
-              href="/public"
+              href="/"
               className="hover:border-pine hover:text-pine transition delay-75 rounded-full px-2 py-1 text-medGray bg-white flex items-center space-x-2"
             >
               <div className="w-6 h-6 overflow-hidden items-center ">
@@ -73,28 +75,10 @@ export default function Header() {
           </li>
           <li>
             <div className="flex space-x-.5 items-center">
-              <Link
-                href="/menu"
-                className="hover:border-pine hover:text-pine transition delay-75 border border-medGray rounded-full px-2 py-1 text-medGray bg-white font-semibold"
-              >
+              <div className="hover:border-pine hover:text-pine transition delay-75 border border-medGray rounded-full px-2 py-1 text-medGray bg-white font-semibold">
                 Menu
-              </Link>
-              <div className="border border-medGray rounded-full px-2 py-1 bg-white text-medGray hover:border-pine hover:text-pine transition delay-75 font-semibold">
-                <svg
-                  className="w-3 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 6h16M4 12h12M4 18h16"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
               </div>
+              <HamburgerMenu />
             </div>
           </li>
         </ul>
@@ -119,7 +103,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
-              Figma for Site
+              About Me
             </Link>
           </li>
           <li>
@@ -129,7 +113,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="rounded-full px-2 py-1 hover:text-darkGray hover:border-pine transition delay-75 border border-lightLime hover:bg-lightLime text-darkGray bg-lime font-semibold"
             >
-              Inspiration for this Site
+              About this Site
             </Link>
           </li>
         </ul>

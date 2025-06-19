@@ -27,7 +27,7 @@ export default function GetInTouch({ open, setOpen }: GetInTouchProps) {
               >
                 <ClearIcon />
               </button>
-              <h2 className="text-darkGray text-xl font-bold mb-4 p-5">
+              <h2 className="text-darkGray text-xl font-bold mb-4">
                 Happy to connect!
               </h2>
               <ContactForm />{' '}

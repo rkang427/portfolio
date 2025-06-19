@@ -4,9 +4,9 @@ import Header from '../components/layout/header/Header';
 import Footer from '../components/layout/Footer';
 //import Head from 'next/head';
 
-import Theme from '../providers/Theme';
+import Theme from '../components/layout/Theme';
 
-import './globals.css';
+import '../styles/globals.css';
 
 const quicksand = Quicksand({
   variable: '--quicksand',
