@@ -69,7 +69,6 @@ export default function ContactForm() {
         />
         <textarea
           name="message"
-          type="text"
           placeholder="your message here..."
           className="w-full h-12 border-2 border-pine rounded p-3 text-left placeholder-pine"
           required

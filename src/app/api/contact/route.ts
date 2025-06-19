@@ -23,10 +23,10 @@ export async function POST(request: Request) {
       { message: 'Email sent successfully!' },
       { status: 200 },
     );
-  } catch (err) {
+  } catch (err: unknown) {
     console.error(err);
     return NextResponse.json(
-      { error: 'Failed to send email: ' + err.message || err },
+      { error: 'Failed to send email: ' + err },
       { status: 500 },
     );
   }

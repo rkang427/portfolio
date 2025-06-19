@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from "@/components/layout/header/ContactForm";
+import ContactForm from '@/components/layout/header/ContactForm';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -23,7 +23,6 @@ test('displays success message after form submit', async () => {
   fireEvent.click(screen.getByRole('button', { name: /submit/i }));
 
   await waitFor(() =>
-      expect(screen.getByText(/form sent!/i)).toBeInTheDocument()
+    expect(screen.getByText(/form sent!/i)).toBeInTheDocument(),
   );
 });
-

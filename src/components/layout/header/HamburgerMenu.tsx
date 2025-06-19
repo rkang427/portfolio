@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Menu, MenuItem } from '@mui/material';
 
 export default function HamburgerMenu() {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
