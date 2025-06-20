@@ -2,17 +2,17 @@ name: Next.js App CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   all-cli-checks:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3  #checkout code
-      - uses: actions/setup-node@v3 #setup Node.js
+      - uses: actions/checkout@v4  #checkout code
+      - uses: actions/setup-node@v4 #setup Node.js
         with:
           node-version: 18
           cache: 'npm'
@@ -35,7 +35,7 @@ jobs:
         run: npm run build
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: nextjs-build
           path: .next
@@ -47,10 +47,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
@@ -68,23 +68,23 @@ jobs:
     if: github.ref == 'refs/heads/main' && success()
 
     steps:
-        - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 18
-            cache: 'npm'
-        - run: npm ci
-        - uses: actions/download-artifact@v4
-          with:
-            name: nextjs-build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: nextjs-build
 
-        - name: Vercel Deployment
-          uses: amondnet/vercel-action@v20
-          with:
-            vercel-token: ${{ secrets.VERCEL_TOKEN }}
-            vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-            vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-            working-directory: ./
-            prod: true
-            zeit-token: ''
+      - name: Vercel Deployment
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          zeit-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
+          prod: true
