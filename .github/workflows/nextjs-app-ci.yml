@@ -40,10 +40,6 @@ jobs:
           ls -la
           echo ".next folder contents:"
           ls -la .next || echo ".next not found!"
-
-      - name: Check build output
-        run: ls -la && ls -la .next
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -85,6 +81,9 @@ jobs:
           node-version: 18
           cache: 'npm'
       - run: npm ci
+      - name: Clean .next folder
+        run: rm -rf .next
+
       - uses: actions/download-artifact@v4
         with:
           name: nextjs-build
