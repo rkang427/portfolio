@@ -33,6 +33,12 @@ jobs:
 
       - name: Build app
         run: npm run build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: nextjs-build
+          path: .next
   e2e:
     name: Run Playwright E2E Tests
     needs: all-cli-checks
