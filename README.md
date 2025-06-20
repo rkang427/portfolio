@@ -9,11 +9,38 @@ About This Project
 ## [Workflow](https://trello.com/invite/b/6854a544f3ed491ab956ae6d/ATTI680a676f5390bda653e8c8a9fe816d40F50900E0/my-trello-board)
 ```mermaid
 graph TD
-  A --> B
-  B --> C
-  ``` 
+  Design --> Implement
+  Implement --> Deploy
+  ```
 ---
+## UML
+```mermaid
+graph TD
+  subgraph Browser [Client's Browser]
+    A[Name, E-mail, Message UI Components]
+    A -->|Press Submit| B(ContactForm)
+  end
 
+  subgraph frontend [Next.js/React App]
+    B -->|POST /api/contact| C[API Route]
+    C --> D[Nodemailer]
+  end 
+
+  D -->|SMTP| E[Gmail SMTP Server]
+  E -->|Delivers Email| F[Rhee's Inbox]
+
+  classDef blackText fill:#ffffff,stroke:#000000,color:#000000;
+
+  class A,B,C,D,E,F blackText;
+
+ style A fill:#fef9c3,stroke:#eab308,stroke-width:2px
+  style B fill:#fef9c3,stroke:#eab308,stroke-width:2px
+  style C fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
+  style D fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
+  style E fill:#fef2f2,stroke:#dc2626,stroke-width:2px
+  style F fill:#d1fae5,stroke:#059669,stroke-width:2px
+
+```
 [//]: # (https://mermaid.live/edit#pako:eNpNjUEOgjAURK_SzBoJ0tZKFyYKR3BlumlsFaK0pEKiEu5uITH6VzOZN39GnL2xkLgG3dXkWClHyJ6sVjtymOVhkSWSCDQGsg-DTdDa0OrZYpwhhb62rVWQURodbgrKTbHTaXfyvv3Wgh-uNeRF3x_RDZ3Rva0aHad_iHXGhtIProfkywfIEU9IKlhK6TajLOOCbzhjCV6QbJOyGIkip3khCppPCd7LZpZuBc_-bj19AH6QRM4&#41)
 ## Getting Started
 
