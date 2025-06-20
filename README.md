@@ -14,6 +14,7 @@ graph TD
   ```
 ---
 ## UML
+### Contact Form Component Diagram
 ```mermaid
 graph TD
   subgraph Browser [Client's Browser]
@@ -26,8 +27,8 @@ graph TD
     C --> D[Nodemailer]
   end 
 
-  D -->|SMTP| E[Gmail SMTP Server]
-  E -->|Delivers Email| F[Rhee's Inbox]
+  D -->|Simple Mail Transfer Protocol| E[Gmail SMTP Server]
+  E -->|Delivers E-mail| F[Rhee's Inbox]
 
   classDef blackText fill:#ffffff,stroke:#000000,color:#000000;
 
