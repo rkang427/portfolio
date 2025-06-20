@@ -46,6 +46,7 @@ jobs:
         with:
           name: nextjs-build
           path: |
+            ./.next
             .next
             .next/**
 #  e2e:
