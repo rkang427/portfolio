@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="white text-medGray p-4">
-      <div className="flex justify-between  items-center md:mx-10 md:mb-12">
+      <div className="flex justify-between  items-center md:mx-10 md:mb-8">
         <ul className="md:mb-12 flex space-x-3 items-center md:mx-10 justify-start">
           <li className="w-10 h-10 items-center">
             <Image src="/hamster.gif" alt="Loading" width={80} height={80} />
@@ -98,7 +98,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="https://tinyurl.com/figmark840"
+              href="/about"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"

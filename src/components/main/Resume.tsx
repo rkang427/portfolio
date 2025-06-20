@@ -1,9 +1,22 @@
 import AddIcon from '@mui/icons-material/Add';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Box from '@mui/material/Box';
+
 export default function Resume() {
   return (
     <>
+      <Box
+        sx={{
+          width: 170,
+          height: 170,
+          bgcolor: 'var(--superLightGray)',
+          borderRadius: 4,
+          border: '1px solid var(--darkGray)',
+          marginTop: 4,
+          alignSelf: 'center',
+        }}
+      ></Box>
       <div className="md:space-x-4 ">
         <h1 className="pl-4 text-lg font-extrabold text-darkGray py-4"> </h1>
         <a
