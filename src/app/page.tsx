@@ -10,12 +10,12 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-stretch  h-[100%] overflow-hidden">
         <div className="md:basis-[67%] flex flex-col min-h-0 overflow-auto">
           <Intro />
-          <div className="flex flex-1 justify-evenly items-center min-h-0">
-            <div className="flex flex-col flex-grow overflow-auto min-h-0">
+          <div className="flex items-center min-h-0">
+            <div className="md:basis-[50%] flex flex-col flex-grow: 1 overflow-auto min-h-0 mr-5">
               <ProjectSummary />
             </div>
             <div className="hidden md:block border-l border-gray-300 self-stretch" />
-            <div className="flex flex-col flex-grow overflow-auto min-h-0">
+            <div className="md:basis-[50%] flex flex-col flex-grow: 1 overflow-auto min-h-0 ">
               <TechStack />
             </div>
           </div>

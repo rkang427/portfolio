@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="white text-medGray p-4">
-      <div className="flex justify-between  items-center md:mx-10 md:mb-8">
+      <div className="flex justify-between  items-center md:mx-10 md:mb-5">
         <ul className="md:mb-12 flex space-x-3 items-center md:mx-10 justify-start">
           <li className="w-10 h-10 items-center">
             <Image src="/hamster.gif" alt="Loading" width={80} height={80} />

@@ -37,9 +37,7 @@ export default function ContactForm() {
         form.current?.reset();
       } else {
         const errorData = await stat.json();
-        setStatus(
-          'Failed to send form: ' + (errorData.error || 'Unknown error'),
-        );
+        setStatus('Failed to send form: ' + (errorData.error || '???'));
       }
     } catch (e) {
       setStatus('Error: ' + e);

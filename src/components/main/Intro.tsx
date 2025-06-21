@@ -15,7 +15,7 @@ export default function Intro() {
           height={50}
         />
       </div>
-      <h2 className="w-[80%] text-3xl font-semibold text-darkGray py-4">
+      <h2 className="w-[90%] text-3xl font-semibold text-darkGray py-4">
         My name is Rhee, a <SwitchRole /> <br />
         with a growing love for Software Engineering. This portfolio is a
         reflection of{' '}
