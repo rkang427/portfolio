@@ -26,7 +26,8 @@ type api = {
     };
   };
 };
-type day = api['viewer']['contributionsCollection']['contributionCalendar']['weeks'][number]['contributionDays'][number];
+type day =
+  api['viewer']['contributionsCollection']['contributionCalendar']['weeks'][number]['contributionDays'][number];
 
 function TextWithCircle({ x, y }: { x?: number; y?: number }) {
   return (

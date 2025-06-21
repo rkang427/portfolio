@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hidden md:block w-px bg-gray-300 self-stretch" />
-        <div className="md:basis-[33%] flex flex-col h-full space-y-4 overflow-auto">
+        <div className="md:basis-[33%] flex flex-col h-full mb-4 overflow-auto">
           <Resume />
           <div className="hidden md:block border-t border-gray-300 self-stretch" />
           <GoldenRatio />

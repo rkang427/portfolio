@@ -8,8 +8,8 @@ export default function Resume() {
     <>
       <Box
         sx={{
-          width: 170,
-          height: 170,
+          width: 120,
+          height: 120,
           bgcolor: 'var(--superLightGray)',
           borderRadius: 4,
           border: '1px solid var(--darkGray)',
@@ -17,13 +17,13 @@ export default function Resume() {
           alignSelf: 'center',
         }}
       ></Box>
-      <div className="md:space-x-4 ">
-        <h1 className="pl-4 text-lg font-extrabold text-darkGray py-4"> </h1>
+      <div className="md:space-x-4 justify-items-center">
+        <h1 className="pl-4 text-lg font-extrabold text-darkGray py-2"> </h1>
         <a
           href="https://rkresume.tiiny.site/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-between text-lg rounded-md font-semibold bg-lime hover:bg-lightLime text-darkGray px-3 py-2 mb-4"
+          className="w-80 flex items-center justify-between text-lg rounded-md font-semibold bg-lime hover:bg-lightLime text-darkGray px-3 py-2 mb-4"
         >
           <span>General Resume</span>
           <div className="flex items-center justify-between gap-2">
@@ -32,7 +32,7 @@ export default function Resume() {
             <ArrowOutwardIcon className="rounded-full border border-darkGray hover:bg-lightGray" />
           </div>
         </a>
-        <h2 className="flex items-center justify-between text-lg rounded-md font-semibold border-2 border-lightGray hover:bg-lightLime text-darkGray px-3 py-2 mb-4">
+        <h2 className="w-80 flex items-center justify-between text-lg rounded-md font-semibold border-2 border-lightGray hover:bg-lightLime text-darkGray px-3 py-2 mb-4">
           <span>Data Science Resume</span>
           <div className="flex items-center justify-between gap-2">
             <AddIcon className="rounded-full border border-darkGray ml-auto hover:bg-lightGray" />
@@ -40,7 +40,7 @@ export default function Resume() {
             <ArrowOutwardIcon className="rounded-full border border-darkGray ml-auto hover:bg-lightGray" />
           </div>
         </h2>
-        <h2 className="flex items-center justify-between text-lg rounded-md font-semibold border-2 border-lightGray hover:bg-lightLime text-darkGray px-3 py-2 mb-4">
+        <h2 className="w-80 flex items-center justify-between text-lg rounded-md font-semibold border-2 border-lightGray hover:bg-lightLime text-darkGray px-3 py-2 mb-4">
           <span>Full Stack Resume</span>
           <div className="flex items-center justify-between gap-2">
             <AddIcon className="rounded-full border border-darkGray ml-auto hover:bg-lightGray" />
