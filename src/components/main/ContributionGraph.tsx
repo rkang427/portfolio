@@ -10,7 +10,25 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from 'recharts';
-function TextWithCircle({ x, y }) {
+
+//from graphql
+type api = {
+  viewer: {
+    contributionsCollection: {
+      contributionCalendar: {
+        weeks: {
+          contributionDays: {
+            date: string;
+            contributionCount: number;
+          }[];
+        }[];
+      };
+    };
+  };
+};
+type day = api['viewer']['contributionsCollection']['contributionCalendar']['weeks'][number]['contributionDays'][number];
+
+function TextWithCircle({ x, y }: { x?: number; y?: number }) {
   return (
     <g transform={`translate(${x},${y})`}>
       <circle cx={243} cy={0} r={20} fill="#DFF314" />
@@ -31,7 +49,7 @@ function TextWithCircle({ x, y }) {
   );
 }
 export default function ContributionGraph() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState<{ data?: api }>({});
   useEffect(() => {
     async function loadData() {
       const stat = await fetch('/api/github-contributions', {
@@ -50,7 +68,7 @@ export default function ContributionGraph() {
     data?.data?.viewer?.contributionsCollection?.contributionCalendar?.weeks?.at(
       -1,
     );
-  const tmp = pastWeekData?.contributionDays?.map((day) => ({
+  const tmp = pastWeekData?.contributionDays?.map((day: day) => ({
     date: day.date,
     github_commits: day.contributionCount ?? 1,
   }));
