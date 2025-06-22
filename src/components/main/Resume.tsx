@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Resume() {
   return (
     <>
-      <div className="flex justify-center items-center w-full">
+      <div className="flex justify-center items-center w-full mt-3">
         <span className="absolute text-7xl italic text-lime -rotate-12 pointer-events-none select-none z-0">
           Figma
         </span>
@@ -13,12 +13,11 @@ export default function Resume() {
           href="https://tinyurl.com/figmark840"
           target="_blank"
           rel="noopener noreferrer"
-          className="z-10"
+          className="rounded-md  z-10 border-4 border-lightLime "
         >
           <Image src="/qrcode.svg" width="120" height="120" alt="qr code" />
         </a>
       </div>
-
       <div className="md:space-x-4 justify-items-center">
         <h1 className="pl-4 text-lg font-extrabold text-darkGray py-2"> </h1>
         <a

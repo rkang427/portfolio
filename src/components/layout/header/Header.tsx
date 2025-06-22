@@ -99,8 +99,6 @@ export default function Header() {
           <li>
             <Link
               href="/about"
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
               About Me
@@ -111,7 +109,7 @@ export default function Header() {
               href="https://dribbble.com/shots/24883719-AI-Data-Science-Machine-Learning-Template" //"/webinspo"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full px-2 py-1 hover:text-darkGray hover:border-pine transition delay-75 border border-lightLime hover:bg-lightLime text-darkGray bg-lime font-semibold"
+              className="rounded-full px-2 py-1 hover:text-pine hover:border-pine transition delay-75 border border-lightLime hover:bg-lightLime text-darkGray bg-lime font-semibold"
             >
               About this Site
             </Link>

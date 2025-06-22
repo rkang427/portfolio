@@ -29,7 +29,7 @@ export default function RootLayout({
       {/*  <link rel="icon" type="image/svg+xml" href="/home.svg" /> */}
       {/*</Head>*/}
       <body
-        className={`${quicksand.variable} antialiased flex flex-col min-h-screen h-full`}
+        className={`${quicksand.variable} antialiased flex flex-col min-h-screen h-full overflow-hidden`}
       >
         <Theme>
           <Header />

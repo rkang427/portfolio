@@ -1,12 +1,12 @@
 export default function SearchBar() {
   return (
     <form
-      className="relative w-full max-w-sm"
+      className="relative w-full max-w-xl"
       onSubmit={(e) => e.preventDefault()}
     >
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Under Construction!"
         className="w-full border rounded-full px-4 py-1 pr-12 focus:outline-none focus:ring"
       />
       <button

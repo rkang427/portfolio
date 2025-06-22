@@ -87,7 +87,7 @@ export default function GoldenRatio() {
             const end = dotted_new[index + 3];
             const midX = (start.x2 + end.x2) / 1.5;
             const midY = (start.y2 + end.y2) / 1.5;
-            console.log('text pos:', midX, midY, 'index:', index);
+            //console.log('text pos:', midX, midY, 'index:', index);
 
             return (
               <text

@@ -1,19 +1,34 @@
 import Image from 'next/image';
 import { SwitchRole } from '@/components/main/SwitchRole';
+import SendIcon from '@mui/icons-material/Send';
+import LocalSeeIcon from '@mui/icons-material/LocalSee';
+import LightModeIcon from '@mui/icons-material/LightMode';
 export default function Intro() {
   return (
     <>
-      <div className="md:flex items-center justify-baseline gap-10">
-        <h1 className="text-6xl font-extrabold text-darkGray py-4 mt-3">
+      <div className="md:flex items-center justify-between  gap-10">
+        <h1 className="flex items-center text-6xl font-extrabold text-darkGray py-4 mt-3">
           Hey There
+          <Image
+            src="/icons8-database-50.png"
+            alt="Loading"
+            className="text-darkGray flex-shrink-0 self-center object-contain bg-lime hover:bg-lightLime rounded-full p-2 ml-5"
+            width={55}
+            height={55}
+          />
         </h1>
-        <Image
-          src="/icons8-database-50.png"
-          alt="Loading"
-          className="flex-shrink-0 self-center object-contain bg-lime rounded-full px-3 py-3"
-          width={50}
-          height={50}
-        />
+
+        <div className="flex justify-end items-center gap-4   p-2   mr-10">
+          <div className="border-darkGray hover:border-lime hover:bg-lime border-2 rounded-full h-9 w-9 flex items-center justify-center">
+            <LightModeIcon className="  text-darkGray     " />
+          </div>
+          <div className="border-darkGray hover:border-lime hover:bg-lime border-2 rounded-full h-9 w-9 flex items-center justify-center">
+            <SendIcon className="h-7 w-7 text-darkGray   rounded-full" />
+          </div>
+          <div className="border-darkGray hover:border-lime hover:bg-lime border-2 rounded-full h-9 w-9 flex items-center justify-center">
+            <LocalSeeIcon className="h-7 w-7 text-darkGray   rounded-full" />
+          </div>{' '}
+        </div>
       </div>
       <h2 className="w-[90%] text-3xl font-semibold text-darkGray py-4">
         My name is Rhee, a <SwitchRole /> <br />

@@ -51,6 +51,7 @@ function TextWithCircle({ x, y }: { x?: number; y?: number }) {
 }
 export default function ContributionGraph() {
   const [data, setData] = useState<{ data?: api }>({});
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function loadData() {
       const stat = await fetch('/api/github-contributions', {
@@ -60,20 +61,32 @@ export default function ContributionGraph() {
       });
       const json = await stat.json();
       setData(json);
+      setLoading(false);
     }
 
     loadData();
   }, []);
 
-  const pastWeekData =
-    data?.data?.viewer?.contributionsCollection?.contributionCalendar?.weeks?.at(
-      -1,
-    );
-  const tmp = pastWeekData?.contributionDays?.map((day: day) => ({
-    date: day.date,
-    github_commits: day.contributionCount ?? 1,
-  }));
+  const allDays =
+    data?.data?.viewer?.contributionsCollection?.contributionCalendar?.weeks?.flatMap(
+      (week) => week.contributionDays,
+    ) ?? [];
 
+  const pastWeekData = allDays.slice(-7);
+  const tmp = pastWeekData?.map((day: day) => ({
+    date: day.date,
+    github_commits:
+      day.contributionCount === 0 || day.contributionCount === null
+        ? 1
+        : day.contributionCount,
+  }));
+  if (loading) {
+    return (
+      <div className="text-pine text-lg font-semibold">
+        Thinking... Thank you for being patient!
+      </div>
+    );
+  }
   return (
     <div style={{ width: '90%', height: 200 }}>
       <ResponsiveContainer>
