@@ -7,7 +7,7 @@ import GoldenRatio from '@/components/main/GoldenRatio';
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col md:flex-row items-stretch  h-[100%] overflow-hidden">
+      <div className="w-full flex flex-col md:flex-row items-stretch  h-[100%] overflow-hidden">
         <div className="md:basis-[67%] flex flex-col min-h-0 overflow-auto">
           <Intro />
           <div className="flex items-center min-h-0">
@@ -15,7 +15,7 @@ export default function Home() {
               <ProjectSummary />
             </div>
             <div className="hidden md:block border-l border-gray-300 self-stretch" />
-            <div className="md:basis-[50%] flex flex-col flex-grow: 1 overflow-auto min-h-0 ">
+            <div className="w-full md:basis-[50%] flex flex-col overflow-auto min-h-0 ">
               <TechStack />
             </div>
           </div>

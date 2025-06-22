@@ -34,11 +34,21 @@ export default function HamburgerMenu() {
         </svg>
       </div>
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-        <MenuItem onClick={handleClose}>About Me</MenuItem>
-        <MenuItem onClick={handleClose}>Blog</MenuItem>
-        <MenuItem onClick={handleClose}>Current Work</MenuItem>
-        <MenuItem onClick={handleClose}>Past Projects</MenuItem>
-        <MenuItem onClick={handleClose}>About this Site</MenuItem>
+        <MenuItem component="a" href="/about" onClick={handleClose}>
+          About Me
+        </MenuItem>
+        <MenuItem component="a" href="/blog" onClick={handleClose}>
+          Blog
+        </MenuItem>
+        <MenuItem component="a" href="/currentwork" onClick={handleClose}>
+          Current Work
+        </MenuItem>
+        <MenuItem component="a" href="/pastproj" onClick={handleClose}>
+          Past Projects
+        </MenuItem>
+        <MenuItem component="a" href="/inspo" onClick={handleClose}>
+          About this Site
+        </MenuItem>
       </Menu>
     </>
   );

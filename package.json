@@ -22,8 +22,10 @@
     "@mui/x-charts": "^8.5.3",
     "@svgr/webpack": "^8.1.0",
     "nodemailer": "^7.0.3",
+    "pdfjs-dist": "^5.3.31",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-pdf": "^9.2.1",
     "recharts": "^2.15.4"
   },
   "devDependencies": {
