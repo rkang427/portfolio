@@ -90,8 +90,8 @@ export default function Header() {
         <ul className="flex space-x-4 whitespace-nowrap">
           <li>
             <Link
-              href="/blog"
-              className="w-full rounded-full px-2 py-1  hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
+                href="https://rkang427.vercel.app/"
+                className="w-full rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
               My Blog
             </Link>
