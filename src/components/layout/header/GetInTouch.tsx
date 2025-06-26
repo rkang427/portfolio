@@ -12,7 +12,7 @@ export default function GetInTouch({ open, setOpen }: GetInTouchProps) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="rounded-full px-2 md:py-3 hover:text-black hover:border-lime transition delay-75 border
+        className="rounded-full px-2 md:py-3 hover:text-lime hover:border-lime transition delay-75 border
         hover:bg-pine text-white bg-darkGray font-semibold"
       >
         Get in Touch

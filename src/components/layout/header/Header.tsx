@@ -35,14 +35,21 @@ export default function Header() {
               href="https://github.com/rkang427/portfolio"
               className=" items-center rounded-full border py-3 px-2.5 font-semibold text-darkGray text-sm"
             >
-              <GitHubIcon className="items-center " width={60} height={60} />
+              <GitHubIcon  sx = {{'&:hover':{
+                  'color': '#DFF314'},
+              }}
+                           className="items-center " width={60} height={60} />
             </Link>
           </li>
           <Link
             href="https://linkedin.com/in/rkang427/"
             className="items-center rounded-full border py-2.5 px-2.5 font-semibold text-darkGray text-sm"
           >
-            <LinkedInIcon className="items-center" width={60} height={60} />
+            <LinkedInIcon
+                sx = {{'&:hover':{
+                  'color': '#DFF314'},
+                  }}
+                className="items-center" width={60} height={60} />
           </Link>
           <li>
             <GetInTouch open={contactOpen} setOpen={setContactOpen} />
@@ -90,8 +97,8 @@ export default function Header() {
         <ul className="flex space-x-4 whitespace-nowrap">
           <li>
             <Link
-                href="https://rkang427.vercel.app/"
-                className="w-full rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
+              href="https://rkang427.vercel.app/"
+              className="w-full rounded-full px-2 py-1 hover:border-pine hover:text-pine transition delay-75 border border-medGray text-medGray bg-white font-semibold"
             >
               My Blog
             </Link>
