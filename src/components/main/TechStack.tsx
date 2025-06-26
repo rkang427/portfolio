@@ -3,13 +3,13 @@
 export default function TechStack() {
   return (
     <>
-      <div className="h-full">
+      <div className=" ">
         <a
           href="/deepgleamreport.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className=" items-start w-full h-full">
+          <div className=" items-start w-full ">
             <div className="mx-4 font-semibold text-2xl text-right text-pine">
               Research &<span className="text-black"> Writing</span>
             </div>
@@ -24,7 +24,7 @@ export default function TechStack() {
             <iframe
               src="/deepgleamreport.pdf"
               width="100%"
-              height="100%"
+              height="50%"
               className="items-center"
             />
           </div>
@@ -38,7 +38,7 @@ export default function TechStack() {
             <iframe
               src="/trireport.pdf"
               width="100%"
-              height="100%"
+              height="50%"
               className="items-center"
             />
           </div>
