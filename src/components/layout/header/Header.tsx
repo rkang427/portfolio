@@ -35,10 +35,16 @@ export default function Header() {
               href="https://github.com/rkang427/portfolio"
               className=" items-center rounded-full border py-3 px-2.5 font-semibold text-darkGray text-sm"
             >
-              <GitHubIcon  sx = {{'&:hover':{
-                  'color': '#DFF314'},
-              }}
-                           className="items-center " width={60} height={60} />
+              <GitHubIcon
+                sx={{
+                  '&:hover': {
+                    color: '#DFF314',
+                  },
+                }}
+                className="items-center "
+                width={60}
+                height={60}
+              />
             </Link>
           </li>
           <Link
@@ -46,10 +52,15 @@ export default function Header() {
             className="items-center rounded-full border py-2.5 px-2.5 font-semibold text-darkGray text-sm"
           >
             <LinkedInIcon
-                sx = {{'&:hover':{
-                  'color': '#DFF314'},
-                  }}
-                className="items-center" width={60} height={60} />
+              sx={{
+                '&:hover': {
+                  color: '#DFF314',
+                },
+              }}
+              className="items-center"
+              width={60}
+              height={60}
+            />
           </Link>
           <li>
             <GetInTouch open={contactOpen} setOpen={setContactOpen} />

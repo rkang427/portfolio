@@ -10,7 +10,8 @@
     "lint": "eslint . --fix",
     "prepare": "husky install",
     "format": "prettier --write .",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "index:blog": "ts-node src/scripts/MeiliSearchCronJob.cts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -21,6 +22,8 @@
     "@mui/material": "^7.1.1",
     "@mui/x-charts": "^8.5.3",
     "@svgr/webpack": "^8.1.0",
+    "dotenv": "^17.0.0",
+    "meilisearch": "^0.51.0",
     "nodemailer": "^7.0.3",
     "pdfjs-dist": "^5.3.31",
     "react": "^19.0.0",
@@ -58,6 +61,6 @@
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }
